@@ -2,7 +2,6 @@ package com.kodilla.testing.forum.statistics;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
-
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 public class StatisticsTestSuite {
@@ -35,9 +34,9 @@ public class StatisticsTestSuite {
         Assert.assertEquals(4, userCount);
         Assert.assertEquals(0, postsCount);
         Assert.assertEquals(400, commentsCount);
-        Assert.assertTrue(avgPostsPerUser==0);
-        Assert.assertTrue(avgCommentsPerUser==100);
-        Assert.assertTrue(avgCommentsPerPost==0);
+        Assert.assertEquals(avgPostsPerUser,0.0,0.1);
+        Assert.assertEquals(avgCommentsPerUser,100.0,0.1);
+        Assert.assertEquals(avgCommentsPerPost,0.0,0.1);
     }
 
     @Test
@@ -69,9 +68,9 @@ public class StatisticsTestSuite {
         Assert.assertEquals(4, userCount);
         Assert.assertEquals(100, postsCount);
         Assert.assertEquals(0, commentsCount);
-        Assert.assertTrue(avgPostsPerUser==25);
-        Assert.assertTrue(avgCommentsPerUser==0);
-        Assert.assertTrue(avgCommentsPerPost==0);
+        Assert.assertEquals(avgPostsPerUser,25.0,0.1);
+        Assert.assertEquals(avgCommentsPerUser,0,0.1);
+        Assert.assertEquals(avgCommentsPerPost,0,0.1);
     }
 
     @Test
@@ -103,9 +102,9 @@ public class StatisticsTestSuite {
         Assert.assertEquals(4, userCount);
         Assert.assertEquals(1000, postsCount);
         Assert.assertEquals(3000, commentsCount);
-        Assert.assertTrue(avgPostsPerUser==250);
-        Assert.assertTrue(avgCommentsPerUser==750);
-        Assert.assertTrue(avgCommentsPerPost==3);
+        Assert.assertEquals(avgPostsPerUser,250.0,0.1);
+        Assert.assertEquals(avgCommentsPerUser,750.0,0.1);
+        Assert.assertEquals(avgCommentsPerPost,3.0,0.1);
     }
 
     @Test
@@ -133,9 +132,9 @@ public class StatisticsTestSuite {
         Assert.assertEquals(0, userCount);
         Assert.assertEquals(1000, postsCount);
         Assert.assertEquals(3000, commentsCount);
-        Assert.assertTrue(avgPostsPerUser==0);
-        Assert.assertTrue(avgCommentsPerUser==0);
-        Assert.assertTrue(avgCommentsPerPost==3);
+        Assert.assertEquals(avgPostsPerUser,0.0, 0.1);
+        Assert.assertEquals(avgCommentsPerUser,0.0,0.1);
+        Assert.assertEquals(avgCommentsPerPost,3.0,0.1);
     }
 
     @Test
@@ -166,8 +165,8 @@ public class StatisticsTestSuite {
         Assert.assertEquals(100, userCount);
         Assert.assertEquals(2000, postsCount);
         Assert.assertEquals(1000, commentsCount);
-        Assert.assertTrue(avgPostsPerUser==20);
-        Assert.assertTrue(avgCommentsPerUser==10);
-        Assert.assertTrue(avgCommentsPerPost==0.5);
+        Assert.assertEquals(avgPostsPerUser,20,0.1);
+        Assert.assertEquals(avgCommentsPerUser,10,0.1);
+        Assert.assertEquals(avgCommentsPerPost,0.5,0.1);
     }
 }
