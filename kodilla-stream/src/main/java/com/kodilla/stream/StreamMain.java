@@ -1,4 +1,5 @@
 package com.kodilla.stream;
+import com.kodilla.stream.array.ArrayOperations;
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
@@ -6,6 +7,8 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import static com.kodilla.stream.array.ArrayOperations.getAverage;
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -20,5 +23,9 @@ public class StreamMain {
         theResultMapOfUsers.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
+
+
     }
 }
