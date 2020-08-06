@@ -11,7 +11,6 @@ public class FirstChallenge {
         return a / b;
     }
 
-
     public static void main(String[] args) {
         FirstChallenge firstChallenge = new FirstChallenge();
         double result = 0.00;
