@@ -8,7 +8,10 @@ public class ProductOrderService {
 
         OrderProcessor orderProcessor = new OrderProcessor(
                 new MailService(), new ElectronicsPurchaseService(), new ElectronicsPurchaseRepository());
-        orderProcessor.process(purchaseRequest);
+        purchaseDto result = orderProcessor.process(purchaseRequest);
+        if(result.isResult()){
+            System.out.println("Product purchased: " + result.getProduct().getProductName());
+        } else System.out.println("Product unavailable.");
 
     }
 }
