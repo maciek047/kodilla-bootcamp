@@ -20,6 +20,8 @@ public class CustomerTestSuite {
         String kodillaShouldBuy = kodilla.predict();
         System.out.println("Kodilla should: " + kodillaShouldBuy);
 
+
+
         //Then
         Assert.assertEquals("[Conservative predictor] Buy debentures of XYZ", stevenShouldBuy);
         Assert.assertEquals("[Aggressive predictor] Buy stock of XYZ", johnShouldBuy);
