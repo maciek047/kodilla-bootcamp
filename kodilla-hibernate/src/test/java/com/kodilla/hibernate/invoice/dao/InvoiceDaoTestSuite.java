@@ -39,6 +39,7 @@ public class InvoiceDaoTestSuite {
         Invoice invoice1 = new Invoice("FV 01/2021");
         Invoice invoice2 = new Invoice("FV 02/2021");
 
+        // redundant?
         item1.setInvoice(invoice1);
         item2.setInvoice(invoice1);
         item3.setInvoice(invoice2);
