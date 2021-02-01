@@ -9,7 +9,9 @@ public class SudokuRun {
         System.out.println(newGame.getSudokuBoard());
         while(continuePlay) {
 
+
             newGame.start();
+
 //       TEST INPUT
 //            newGame.userInput(0, 0, 6);
 //            newGame.userInput(0, 1, 2);
