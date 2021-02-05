@@ -11,7 +11,7 @@ public class GoogleTestingApp {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
         driver.get("https://www.google.com");
 
-        WebElement searchField = driver.findElement(By.tagName("input").);
-        searchField.sendKeys("Kodilla");
+//        WebElement searchField = driver.findElement(By.tagName("input").);
+//        searchField.sendKeys("Kodilla");
     }
 }
